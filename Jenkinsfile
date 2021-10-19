@@ -1,6 +1,7 @@
 pipeline {
   agent any
   stages {
+    parallel {
     stage('Compiling maven project') {
       steps {
         echo 'Pipeline has started'
@@ -12,6 +13,8 @@ pipeline {
         echo 'Pipeline has started'
       }
     }
+    }
+    
 
   }
 }
