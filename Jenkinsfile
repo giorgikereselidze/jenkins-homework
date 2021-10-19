@@ -1,6 +1,7 @@
 pipeline {
   agent any
   stages {
+  stage('Functional Test') {
     parallel {
     stage('Compiling maven project') {
       steps {
@@ -15,6 +16,6 @@ pipeline {
     }
     }
     
-
+}
   }
 }
